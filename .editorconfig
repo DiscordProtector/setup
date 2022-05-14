@@ -1,4 +1,0 @@
-﻿[*.cs]
-
-# CS0656: Missing compiler required member 'Microsoft.CSharp.RuntimeBinder.Binder.Convert'
-dotnet_diagnostic.CS0656.severity = none

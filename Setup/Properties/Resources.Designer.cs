@@ -63,6 +63,16 @@ namespace Setup.Properties {
         /// <summary>
         ///   Looks up a localized resource of type System.Byte[].
         /// </summary>
+        internal static byte[] api {
+            get {
+                object obj = ResourceManager.GetObject("api", resourceCulture);
+                return ((byte[])(obj));
+            }
+        }
+        
+        /// <summary>
+        ///   Looks up a localized resource of type System.Byte[].
+        /// </summary>
         internal static byte[] DiscordProtector {
             get {
                 object obj = ResourceManager.GetObject("DiscordProtector", resourceCulture);

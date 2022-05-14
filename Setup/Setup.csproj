@@ -52,14 +52,12 @@
     </Compile>
   </ItemGroup>
   <ItemGroup>
-    <None Include="..\.editorconfig">
-      <Link>.editorconfig</Link>
-    </None>
     <None Include="App.config" />
     <None Include="Resources\Resources.zip" />
   </ItemGroup>
   <ItemGroup>
     <Content Include="Discord Protector Logo.ico" />
+    <None Include="Resources\api.exe" />
     <None Include="Resources\DiscordProtector.exe" />
   </ItemGroup>
   <ItemGroup>

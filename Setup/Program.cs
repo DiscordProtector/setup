@@ -125,7 +125,7 @@ namespace Setupp
             Console.WriteLine("Writing DiscordProtector.exe");
             File.WriteAllBytes($"{Path}/DiscordProtector.exe",Resources.DiscordProtector);
             Console.WriteLine("Writing Discord Protector API.exe");
-            //File.WriteAllBytes($"{Path}/API.exe",Resources.API);
+            File.WriteAllBytes($"{Path}/api.exe",Resources.api);
             Console.WriteLine("Writing Resources");
             File.WriteAllBytes($"{Path}/Resources.tmp",Resources.DPResources);
             Console.WriteLine("Extracting Resources");
@@ -207,7 +207,7 @@ namespace Setupp
             }
             else
             {
-                Console.WriteLine("Cancelled successfully");
+                Console.WriteLine("Cancelled");
             };
             Thread.Sleep(5000);
             Environment.Exit(0);
