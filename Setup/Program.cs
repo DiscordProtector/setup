@@ -7,7 +7,6 @@ using Directory = System.IO.Directory;
 using System.Diagnostics;
 using System.Threading;
 using Microsoft.Win32;
-
 namespace Setupp
 {
     internal class Program
@@ -19,7 +18,7 @@ namespace Setupp
         static void PrintHeader()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Discord Protector Setup V1.0.0\n");
+            Console.WriteLine("Discord Protector Setup V1.0.1\n");
             Console.ResetColor();
         }
 
@@ -107,6 +106,24 @@ namespace Setupp
             PrintHeader();
             Console.WriteLine("Installing Discord Protector\n");
             Console.ForegroundColor = ConsoleColor.Magenta;
+            Console.WriteLine("Killing Discord");
+            foreach(var p in Process.GetProcessesByName("discord"))
+            {
+                p.Kill();
+            };
+            foreach(var p in Process.GetProcessesByName("discordptb"))
+            {
+                p.Kill();
+            };
+            foreach(var p in Process.GetProcessesByName("discordcanary"))
+            {
+                p.Kill();
+            };
+            foreach(var p in Process.GetProcessesByName("discorddevelopment"))
+            {
+                p.Kill();
+            };
+            Thread.Sleep(5000);
             Console.WriteLine("Creating Directory");
             try
             {
@@ -117,7 +134,7 @@ namespace Setupp
             }
             catch
             {
-                System.Windows.Forms.MessageBox.Show("Failed to install Discord Protector, Try closing any applications using any files inside.", "Discord Protector Setup", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                System.Windows.Forms.MessageBox.Show("Failed to install Discord Protector, Try closing any open instances of Discord Protector or try restarting your pc.", "Discord Protector Setup", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
                 Environment.Exit(1);
                 return;
             };
@@ -135,7 +152,7 @@ namespace Setupp
             }
             catch
             {
-                System.Windows.Forms.MessageBox.Show("Failed to Extract Resources, Try closing any applications using any files inside.","Discord Protector Setup",System.Windows.Forms.MessageBoxButtons.OK,System.Windows.Forms.MessageBoxIcon.Error);
+                System.Windows.Forms.MessageBox.Show("Failed to Extract Resources, Try closing any open instances of Discord Protector or try restarting your pc.", "Discord Protector Setup",System.Windows.Forms.MessageBoxButtons.OK,System.Windows.Forms.MessageBoxIcon.Error);
                 Environment.Exit(1);
                 return;
             };
@@ -170,6 +187,24 @@ namespace Setupp
             {
                 try
                 {
+                    Console.WriteLine("Killing Discord");
+                    foreach (var p in Process.GetProcessesByName("discord"))
+                    {
+                        p.Kill();
+                    };
+                    foreach (var p in Process.GetProcessesByName("discordptb"))
+                    {
+                        p.Kill();
+                    };
+                    foreach (var p in Process.GetProcessesByName("discordcanary"))
+                    {
+                        p.Kill();
+                    };
+                    foreach (var p in Process.GetProcessesByName("discorddevelopment"))
+                    {
+                        p.Kill();
+                    };
+                    Thread.Sleep(5000);
                     Console.WriteLine("Removing directory");
                     if (Directory.Exists(Path))
                     {
@@ -178,7 +213,7 @@ namespace Setupp
                 }
                 catch
                 {
-                    System.Windows.Forms.MessageBox.Show("Failed to uninstall Discord Protector, Try closing any applications using any files inside.", "Discord Protector Setup", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
+                    System.Windows.Forms.MessageBox.Show("Failed to uninstall Discord Protector, Try closing any open instances of Discord Protector or try restarting your pc.", "Discord Protector Setup", System.Windows.Forms.MessageBoxButtons.OK, System.Windows.Forms.MessageBoxIcon.Error);
                     Environment.Exit(1);
                     return;
                 };
