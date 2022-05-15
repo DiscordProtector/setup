@@ -18,7 +18,7 @@ namespace Setupp
         static void PrintHeader()
         {
             Console.ForegroundColor = ConsoleColor.Cyan;
-            Console.WriteLine("Discord Protector Setup V1.0.1\n");
+            Console.WriteLine("Discord Protector Setup v1.0.2\n");
             Console.ResetColor();
         }
 
